@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Untitled Document</title>
+</head>
+<style>
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+article img{
+    border-radius: 50%;
+}
+header {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  padding: 40px;
+}
+/*Target the header inside the article*/
+article > header {
+  text-align: left;
+  font-size: 18px;
+  padding: 20px;
+}
+.ribbon {
+  position: absolute;
+  top: 40px;
+  left: -60px; /* shift so it looks correct when rotated */
+  transform: rotate(-45deg);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px 60px;
+}
+.ribbon a {
+  color: white;
+  border: 2px solid white;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.ribbon a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+img {
+  animation: spin 4s linear infinite;
+}
+article img {
+  animation: spin 4s linear infinite;
+}
+body > img, footer img {
+  animation: none;
+}
+
+</style>
+<body>
+<header>My Tutorial 4</header>
+<img src="images/puppies.jpg" alt="image 1"/>
+<article><header>About this tutorial</header>
+In this tutorial I need to make a picture spin for ever...
+<img src="images/strawberry.jpg" alt="image 2"/></article>
+<footer>my footer
+<img src="images/elephant.jpg" alt="image 3"/></footer>
+<div class="ribbon"><a href="#">My Tutorial 4</a></div>
+
+</body>
+</html>
